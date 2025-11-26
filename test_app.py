@@ -15,7 +15,7 @@ class TestApp:
         """Test para el endpoint principal"""
         response = client.get('/')
         assert response.status_code == 200
-        assert b'Murillo IA' in response.data
+        assert b'Tello IA' in response.data
         assert b'v1.0.5' in response.data
     
     def test_health_endpoint(self, client):

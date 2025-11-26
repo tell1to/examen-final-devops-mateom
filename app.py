@@ -14,7 +14,7 @@ HTML_TEMPLATE = '''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murillo - IA Chat</title>
+    <title>Tello - IA Chat</title>
     <style>
         * {
             margin: 0;
@@ -237,7 +237,7 @@ HTML_TEMPLATE = '''
 <body>
     <div class="container">
         <div class="header">
-            <h1>🤖 Murillo IA</h1>
+            <h1>🤖 Tello IA</h1>
             <p>Asistente inteligente de chat</p>
             <div class="version">v1.0.5</div>
         </div>
@@ -366,9 +366,9 @@ def process_with_ai(message: str) -> str:
     """Procesa un mensaje con IA (simulado)"""
     # Implementación simple sin API externa para evitar dependencias de pago
     responses = {
-        "hola": "¡Hola! Bienvenido a Murillo IA. ¿Cómo puedo ayudarte hoy?",
+        "hola": "¡Hola! Bienvenido a Tello IA. ¿Cómo puedo ayudarte hoy?",
         "ayuda": "Estoy aquí para ayudarte. Puedes enviarme mensajes y te responderé lo más rápido posible.",
-        "nombre": "Soy Murillo, una aplicación Flask con capacidades de IA desarrollada como examen CI/CD.",
+        "nombre": "Soy Tello, una aplicación Flask con capacidades de IA desarrollada como examen CI/CD.",
         "gracias": "¡De nada! Siempre es un placer ayudar.",
         "versión": "Estoy ejecutando la versión 1.0.5 del sistema.",
         "estado": "Todo funciona perfectamente. El sistema está en línea y listo.",
