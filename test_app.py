@@ -15,10 +15,8 @@ class TestApp:
         """Test para el endpoint principal"""
         response = client.get('/')
         assert response.status_code == 200
-        data = response.get_json()
-        assert data['status'] == 'ok'
-        assert 'message' in data
-        assert data['version'] == '1.0.5'
+        assert b'Murillo IA' in response.data
+        assert b'v1.0.5' in response.data
     
     def test_health_endpoint(self, client):
         """Test para el health check"""

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_string
+from flask import Flask, request, jsonify, Response
 import requests
 
 app = Flask(__name__)
@@ -334,7 +334,7 @@ HTML_TEMPLATE = '''
 @app.route('/', methods=['GET'])
 def home():
     """Endpoint principal que retorna la interfaz web"""
-    return render_string(HTML_TEMPLATE)
+    return Response(HTML_TEMPLATE, mimetype='text/html')
 
 @app.route('/api/chat', methods=['POST'])
 def chat():
