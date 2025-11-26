@@ -237,7 +237,7 @@ HTML_TEMPLATE = '''
 <body>
     <div class="container">
         <div class="header">
-            <h1>🤖 Murillo IA</h1>
+            <h1>🤖 Tello IA</h1>
             <p>Asistente inteligente de chat</p>
             <div class="version">v1.0.5</div>
         </div>
