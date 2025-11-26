@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  murillo:
+    image: ghcr.io/byronmoreno/murillo:1.0.5
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 512M
+        reservations:
+          cpus: "0.25"
+          memory: 256M
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.murillo.entrypoints=http"
+        - "traefik.http.routers.murillo.rule=Host(`murillo.byronrm.com`)"
+        - "traefik.http.middlewares.murillo-https-redirect.redirectscheme.scheme=https"
+        - "traefik.http.routers.murillo.middlewares=murillo-https-redirect"
+        - "traefik.http.routers.murillo-secure.entrypoints=https"
+        - "traefik.http.routers.murillo-secure.rule=Host(`murillo.byronrm.com`)"
+        - "traefik.http.routers.murillo-secure.tls=true"
+        - "traefik.http.routers.murillo-secure.tls.certresolver=http"
+        - "traefik.http.routers.murillo-secure.service=murillo"
+        - "traefik.http.services.murillo.loadbalancer.server.port=5000"
+        - "traefik.docker.network=traefik-public"
+    networks:
+      - traefik-public
+    environment:
+      - API_KEY=${API_KEY:-default-key}
+
+networks:
+  traefik-public:
+    external: true
