@@ -27,8 +27,6 @@ services:
         - "traefik.docker.network=traefik-public"
     networks:
       - traefik-public
-    environment:
-      - API_KEY=${API_KEY:-default-key}
 
 networks:
   traefik-public:
