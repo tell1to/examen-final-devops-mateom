@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   murillo:
-    image: ghcr.io/byronmoreno/murillo:1.0.5
+    image: ghcr.io/tell1to/murillo:1.0.5
     deploy:
       replicas: 1
       resources:
