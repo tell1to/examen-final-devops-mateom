@@ -14,7 +14,7 @@ HTML_TEMPLATE = '''
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tello - IA Chat</title>
+    <title>Murillo - IA Chat</title>
     <style>
         * {
             margin: 0;
@@ -237,7 +237,7 @@ HTML_TEMPLATE = '''
 <body>
     <div class="container">
         <div class="header">
-            <h1>🤖 Tello IA</h1>
+            <h1>🤖 Murillo IA</h1>
             <p>Asistente inteligente de chat</p>
             <div class="version">v1.0.5</div>
         </div>
