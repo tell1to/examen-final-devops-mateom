@@ -1,11 +1,10 @@
 from flask import Flask, request, jsonify
 import requests
-import os
 
 app = Flask(__name__)
 
 # Configuración de API (puedes usar OpenAI, Hugging Face, o similar)
-API_KEY = os.getenv('API_KEY', 'default-key')
+API_KEY = 'default-key'
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 @app.route('/', methods=['GET'])
